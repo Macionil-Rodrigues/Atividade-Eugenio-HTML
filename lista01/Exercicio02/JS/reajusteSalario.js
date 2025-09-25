@@ -2,12 +2,12 @@ const salarioC = document.getElementById("idInSalario");
 const bntCalcular = document.getElementById("bntCalcularReajuste");
 const resultado = document.getElementById("idOnResultado");
 
-function calcularReajuste(salario) {
-    if (salario <= 1412) {
-        let salarioAjuste = (salario * (1 + 0.50)).toFixed(2);
+function calcularReajuste(salarioC) {
+    if (salarioC <= 1412) {
+        let salarioAjuste = (salarioC * (1 + 0.50)).toFixed(2);
         return " Reajustado é: R$" + salarioAjuste;
     } if (salario > 1412) {
-        let salarioAjuste = (salario * (1 + 0.40)).toFixed(2);
+        let salarioAjuste = (salarioC * (1 + 0.40)).toFixed(2);
         return " reajustado é: R$" + salarioAjuste;
     }
 }

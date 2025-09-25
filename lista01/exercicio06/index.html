@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifa bancária</title>
+</head>
+<body>
+  <h1>Programa para calcular a tarifa bancária</h1>
+  <h2> Dados </h2>
+  <form>
+    <h3>
+      <p>Nome: <input type="text" id="idNome" placeholder="Insira o nome"></p>
+      <p>Conta: <input type="text" id="idConta" placeholder="Insira o número da conta"></p>
+      <p>Saldo semestral: <input type="text" id="idSaldoSemestral" placeholder="Ex.: 300000"></p>
+
+      <p><input type="button" id="bntCalcularTarifa" value="Calcular" onclick="calcularTarifaBanco()"></p>
+
+      <p>Resultado:</p>
+      <p id="idOnResultado"></p>
+    </h3>
+  </form>
+
+  <script src="JS/tarifa.js"></script>
+</body>
+</html>
