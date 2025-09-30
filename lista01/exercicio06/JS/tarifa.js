@@ -12,11 +12,11 @@ function calcularTarifaBanco() {
   const saldoSemestral = Number(bruto);
   const saldoMedio = saldoSemestral / 6;
   let tarifa = 0;
-  if (saldoMedio <= 1000) {
+  if (saldoMedio < 1000) {
     tarifa = 25.00;
 } else if (saldoMedio >= 1000 && saldoMedio < 2000) {
     tarifa = 20.00;
-} else if (saldoMedio >= 2000 && saldoMedio <= 3500) {
+} else if (saldoMedio > 2000 && saldoMedio <= 3500) {
     tarifa = 13.00;
 } else if (saldoMedio > 3500) {
     tarifa = 0;

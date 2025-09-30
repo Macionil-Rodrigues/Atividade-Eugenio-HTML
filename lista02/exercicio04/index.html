@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda</title>
+</head>
+
+<body>
+    <h1>Programa para converter moeda</h1>
+    <h2>Valor</h2>
+    <form>
+        <p>Valor em Real: <input type="text" id="idValorReal"></p>
+
+        <div style="display:flex; gap:16px;">
+            <p>Euro: <input type="radio" name="moeda" value="5.418" data-sigla="EUR"> </p>
+            <p>Libra Esterlina: <input type="radio" name="moeda" value="6.336" data-sigla="GBP"></p>
+            <p>Dólar: <input type="radio" name="moeda" value="5.189" data-sigla="USD"></p>
+        </div>
+        <p><input type="button" id="bntConverter" value="Converter" onclick="eventoBntMoedaSelecionada()"></p>
+        <p>Resultado:</p>
+        <p id="idOnResultado"></p>
+        </h3>
+    </form>
+    <script src="JS/converterMoeda.js"></script>
+</body>
+
+</html>

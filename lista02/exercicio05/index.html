@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma pagamento</title>
+</head>
+<body>
+ <h1>Programa para validar a forma de pagamento</h1>
+ <h2>Valor </h2>   
+ <form>
+    <h3>
+    <p>Valor do Produto:<input type="text" id="idValor"></p>
+    <p>Forma de pagamento</p>
+    <div style="display:flex; gap:16px;">
+    <p>À vista, dinheiro ou cheque:<input type="radio" name="formaPagamento" id="idAvistaDin" value="0.90" data-sigla="A vista dinheiro"> </p>
+    <p>À vista, cartão:<input type="radio" name="formaPagamento" id="idAvistaCart" value="0.95" data-sigla="A vista cartão"> </p>
+    <p>Dividir em 2x:<input type="radio" name="formaPagamento" id="idDividir2X" value="1" data-sigla="2X"> </p>
+    <p>Dividir em 3x:<input type="radio" name="formaPagamento" id="idDividir3X" value="1.10" data-sigla="3X"> </p>
+    </div>
+    <p><input type="button" id="bntValidar" value="Pagar" onclick="EventoBntValidar()"></p>
+        <p>Resultado:</p>
+        <p id="idOnResultado"></p>
+    </h3>
+ </form>
+ <script src="JS/valorProduto.js"></script>
+</body>
+</html>

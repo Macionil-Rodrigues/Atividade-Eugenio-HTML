@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular preço Combustivo</title>
+</head>
+
+<body>
+    <h1>Programa para Calcular o preço da gasolina por tipo de combustivel</h1>
+    <h2>Dados</h2>
+    <form>
+        <h3>
+            <p>Quantidade de litros: <input type="text" id="idValor"></p>
+            <p>Tipo de combustivel</p>
+            <div style="display:flex; gap:16px;">
+                <p>Álcol: <input type="radio" name="tipoCombustivel" value="4.805" id="idAlcol" data-sigla="Álcol"></p>
+                <p>Disel: <input type="radio" name="tipoCombustivel" value="5.953" id="idDisel" data-sigla="Disel"></p>
+                <p>Gasolina: <input type="radio" name="tipoCombustivel" value="6.565" id="idGasolina" data-sigla="Gasolina"></p>
+            </div>
+            <p><input type="button" id="bntValidar" value="Pagar" onclick="EventoBntValidar()"></p>
+            <p>Resultado:</p>
+            <p id="idOnResultado"></p>
+        </h3>
+    </form>
+    <script src="JS/tipoCombustivo.js"></script>
+</body>
+</html>
