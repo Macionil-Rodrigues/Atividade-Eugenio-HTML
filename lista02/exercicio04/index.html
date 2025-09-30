@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Moeda</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conversor de Moedas (switch/case)</title>
 </head>
-
 <body>
-    <h1>Programa para converter moeda</h1>
-    <h2>Valor</h2>
-    <form>
-        <p>Valor em Real: <input type="text" id="idValorReal"></p>
+  <h1>Conversor de Moedas</h1>
 
-        <div style="display:flex; gap:16px;">
-            <p>Euro: <input type="radio" name="moeda" value="5.418" data-sigla="EUR"> </p>
-            <p>Libra Esterlina: <input type="radio" name="moeda" value="6.336" data-sigla="GBP"></p>
-            <p>Dólar: <input type="radio" name="moeda" value="5.189" data-sigla="USD"></p>
-        </div>
-        <p><input type="button" id="bntConverter" value="Converter" onclick="eventoBntMoedaSelecionada()"></p>
-        <p>Resultado:</p>
-        <p id="idOnResultado"></p>
-        </h3>
-    </form>
-    <script src="JS/converterMoeda.js"></script>
+  <form onsubmit="return false;">
+    <h3>
+      <p>Valor em Reais (BRL):<input type="text" id="idValorReal" placeholder="Ex.: 100,00"></p>
+
+      <p>Escolha a moeda:</p>
+      <div style="display:flex; gap:16px;">
+        <p><input type="radio" name="moeda" value="USD"> USD</p>
+        <p><input type="radio" name="moeda" value="EUR"> EUR</p>
+        <p><input type="radio" name="moeda" value="GBP"> GBP</p>
+        <p><input type="radio" name="moeda" value="ARS"> ARS</p>
+      </div>
+
+      <p><input type="button" value="Converter" onclick="eventoBntMoedaSelecionada()"></p>
+      <p>Resultado:</p>
+      <p id="idOnResultado"></p>
+    </h3>
+  </form>
+
+  <script src="js/converterMoeda.js"></script>
 </body>
-
 </html>

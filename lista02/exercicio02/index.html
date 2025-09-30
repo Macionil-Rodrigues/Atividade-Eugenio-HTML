@@ -10,23 +10,25 @@
 <body>
     <h1>Programa para calcular o valor do carro</h1>
     <h2>Dados</h2>
-    <form>
 
+    <form>
         <h3>
             <p>Valor do Carro: <input type="text" id="idVCarro" placeholder="Insira o valor do carro"></p>
+
             <div style="display: flex;">
-                <p>Ar condicionado: <input type="checkbox" id="idArCond"> </p>
-                <p style="padding-left: 16px;">Pintura metalica: <input type="checkbox" id="idPinturaMet" ></p>
-                <p style="padding-left: 16px;">Vidro eletrico: <input type="checkbox" id="idVidroEl"></p>
-                <p style="padding-left: 16px;">Direção hidraulica: <input type="checkbox" id="idDirecaoHid"></p>
+                <p>Ar condicionado: <input type="checkbox" id="idArCond"></p>
+                <p style="padding-left: 16px;">Pintura metálica: <input type="checkbox" id="idPinturaMet"></p>
+                <p style="padding-left: 16px;">Vidro elétrico: <input type="checkbox" id="idVidroEl"></p>
+                <p style="padding-left: 16px;">Direção hidráulica: <input type="checkbox" id="idDirecaoHid"></p>
             </div>
+
             <p><input type="button" id="bntExecutar" value="Executar" onclick="eventoBntExecutar()"></p>
             <p>Resultado:</p>
             <p id="idOnResultado"></p>
         </h3>
     </form>
-    <script src="JS/valorCarro.js"></script>
 
+    <script src="JS/valorCarro.js"></script>
 </body>
 
 </html>

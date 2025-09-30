@@ -1,35 +1,45 @@
-const valorCarro = document.getElementById('idVCarro');
-const arCond = document.getElementById('idArCond');
-const pintura = document.getElementById('idPinturaMet');
-const vidro = document.getElementById('idVidroEl');
-const direcao = document.getElementById('idDirecaoHid');
-const resultado = document.getElementById('idOnResultado');
+const valorCarroEl = document.getElementById('idVCarro');
+const arCondEl = document.getElementById('idArCond');
+const pinturaEl = document.getElementById('idPinturaMet');
+const vidroEl = document.getElementById('idVidroEl');
+const direcaoEl = document.getElementById('idDirecaoHid');
+const resultadoEl = document.getElementById('idOnResultado');
 
-function calcularValorCarro(valorCarro) {
-    const vArCond = Number(1700);
-    const vPintura = Number(800);
-    const vVidro = Number(1200);
-    const vDirecao = Number(2000);
-    
-    if(arCond.checked){
-    valorCarro+=vArCond;
-}
-if(pintura.checked){
-    valorCarro+=vPintura;
-}
-if(vidro.checked){
-    valorCarro+=vVidro;
-}
-if(direcao.checked){
-    valorCarro+=vDirecao;
+function calcularValorCarro(valorBase) {
+    let total = valorBase;
 
-}
-return " O valor do carro é: "+valorCarro
+
+    const selecionados = [];
+    if (arCondEl.checked) selecionados.push('ar');
+    if (pinturaEl.checked) selecionados.push('pintura');
+    if (vidroEl.checked) selecionados.push('vidro');
+    if (direcaoEl.checked) selecionados.push('direcao');
+
+
+    for (const item of selecionados) {
+        switch (item) {
+            case 'ar':
+                total += 1700;
+                break;
+            case 'pintura':
+                total += 800;
+                break;
+            case 'vidro':
+                total += 1200;
+                break;
+            case 'direcao':
+                total += 2000;
+                break;
+            default:
+                break;
+        }
+    }
+
+    return "O valor do carro é: R$ " + total.toFixed(2);
 }
 
 function eventoBntExecutar() {
-   const  valorFinal =calcularValorCarro(Number(valorCarro.value));
-   const saida = valorFinal;
-   resultado.innerText = saida;
-
+    const base = Number(valorCarroEl.value);
+    const saida = calcularValorCarro(base);
+    resultadoEl.innerText = saida;
 }
