@@ -6,7 +6,7 @@ function calcularValor(litros, precoPorLitro) {
 }
 
 function EventoBntValidar() {
-    const litros = Number(String(valorEmLitros.value).replace(",", "."));
+    const litros = Number(valorEmLitros.value);
     if (isNaN(litros) || litros <= 0) {
         resultado.innerText = "Informe uma quantidade válida de litros.";
         return;
@@ -21,16 +21,16 @@ function EventoBntValidar() {
     let preco = 0;
     const sigla = selecionada.dataset.sigla || "Combustível";
 
-    // usa switch pelos IDs do seu HTML
+
     switch (selecionada.id) {
         case "idAlcol":
             preco = Number(selecionada.value);
             break;
         case "idDisel":
-            preco = Number (selecionada.value);
+            preco = Number(selecionada.value);
             break;
         case "idGasolina":
-            preco = Number (selecionada.value);
+            preco = Number(selecionada.value);
             break;
         default:
             resultado.innerText = "Tipo de combustível inválido.";

@@ -5,30 +5,28 @@ const calculoAreaVolume = document.getElementById("btnAreaVolume");
 const resultado = document.getElementById("idOnResultado");
 
 function calcularAreaVolume(opcao, raio, altura) {
-    
-    switch (opcao) {
-    case 1:
-        volume = (Math.PI * Math.pow(raio,2) * altura) / 3;
-        area = Math.PI * raio * Math.sqrt(Math.pow(raio,2) + Math.pow(altura,2));
-        break;
-    case 2:
-        volume = Math.PI * Math.pow(raio,2) * altura;
-        area = 2 * Math.PI * raio * altura;
-        break;
-    case 3:
-        volume = (4/3) * Math.PI * Math.pow(raio,3);
-        area = 4 * Math.PI * Math.pow(raio,2);
-        break;        
 
-    default:
-        return "Opção inválida";
-        
-}
-return `Volume: ${volume.toFixed(2)}` + "\n" +  `Área: ${area.toFixed(2)}`;
+    switch (opcao) {
+        case 1:
+            volume = (Math.PI * Math.pow(raio, 2) * altura) / 3;
+            area = Math.PI * raio * Math.sqrt(Math.pow(raio, 2) + Math.pow(altura, 2));
+            break;
+        case 2:
+            volume = Math.PI * Math.pow(raio, 2) * altura;
+            area = 2 * Math.PI * raio * altura;
+            break;
+        case 3:
+            volume = (4 / 3) * Math.PI * Math.pow(raio, 3);
+            area = 4 * Math.PI * Math.pow(raio, 2);
+            break;
+        default:
+            return "Opção inválida";
+    }
+    return "Volume: "+ volume.toFixed(2)+"+"+ "\n" + "Área: "+area.toFixed(2);
 }
 
 function eventoBtnCalcularFigura() {
-    
+
     const escolha = Number(opcao.value);
     const raioX = Number(raio.value);
     const alturaY = Number(altura.value);

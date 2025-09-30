@@ -6,32 +6,28 @@ const calculoOperacoes = document.getElementById("btnOperacoes");
 const resultado = document.getElementById("idOnResultado");
 
 function calcularOperacoes(opcao, n1, n2) {
-    
+
     switch (opcao) {
-    case "1":
-    calculo = n1 + n2;    
-        break;
-
-    case "2":
-    calculo = n1 - n2;    
-        break;
-
-    case "3":
-    calculo = n1 * n2;    
-        break;
-
-    case "4":
-    calculo = n1 / n2;    
-        break;            
-
-    default:
-        return "Tipo de Operação Inválida";
-}
-return `Resultado: ${calculo}`;
+        case "1":
+            calculo = n1 + n2;
+            break;
+        case "2":
+            calculo = n1 - n2;
+            break;
+        case "3":
+            calculo = n1 * n2;
+            break;
+        case "4":
+            calculo = n1 / n2;
+            break;
+        default:
+            return "Tipo de Operação Inválida";
+    }
+    return `Resultado: ${calculo}`;
 }
 
 function eventoBtnCalcularOperacoesAritmeticas() {
-    
+
     const escolha = opcao.value;
     const nX = Number(numero1.value);
     const nY = Number(numero2.value);

@@ -7,26 +7,26 @@ const resultado = document.getElementById("idOnResultado");
 
 function calcularMedias(opcao, n1, n2, n3) {
 
-const nNotas = 3;
+    const nNotas = 3;
 
-if (opcao == 1) {
-    let calculo = (n1 + n2 + n3) / nNotas;
-    return "Resultado: " + calculo.toFixed(2);
-} else if (opcao == 2) {
-    let calculo = ((n1 * 3) + (n2 * 3) + (n3 * 4)) / (3 + 3 + 4);
-    return "Resultado: " + calculo.toFixed(2);
-} else if (opcao == 3) {
-    let calculo = nNotas / ((1 / n1) + (1 / n2) + (1 / n3));
-    return "Resultado: " + calculo.toFixed(2);
-} else if (opcao == 3) {
-    let calculo = Math.pow((n1 * n2 * n3),1/3);
-    return "Resultado: " + calculo.toFixed(2);
-} else if (opcao == 3) {
-    let calculo = Math.sqrt(((Math.pow(n1,2) + Math.pow(n2,2) + Math.pow(n3,2))) / 3);
-    return "Resultado: " + calculo.toFixed(2);
-} else {
-    return "Esta opção de média é inválida";
-}
+    if (opcao == 1) {
+        let calculo = (n1 + n2 + n3) / nNotas;
+        return "Resultado: " + calculo.toFixed(2);
+    } else if (opcao == 2) {
+        let calculo = ((n1 * 3) + (n2 * 3) + (n3 * 4)) / (3 + 3 + 4);
+        return "Resultado: " + calculo.toFixed(2);
+    } else if (opcao == 3) {
+        let calculo = nNotas / ((1 / n1) + (1 / n2) + (1 / n3));
+        return "Resultado: " + calculo.toFixed(2);
+    } else if (opcao == 3) {
+        let calculo = Math.pow((n1 * n2 * n3), 1 / 3);
+        return "Resultado: " + calculo.toFixed(2);
+    } else if (opcao == 3) {
+        let calculo = Math.sqrt(((Math.pow(n1, 2) + Math.pow(n2, 2) + Math.pow(n3, 2))) / 3);
+        return "Resultado: " + calculo.toFixed(2);
+    } else {
+        return "Esta opção de média é inválida";
+    }
 }
 
 
